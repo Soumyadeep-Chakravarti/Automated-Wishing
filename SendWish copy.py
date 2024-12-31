@@ -1,12 +1,10 @@
 import os
 import json
 import datetime
-import pytz
 import logging
-import traceback
-from time import sleep
+import pytz
 import pywhatkit as kit
-from ErrorHandlers import TokenFileNotFoundError, ContactFileNotFoundError, EventFileNotFoundError, InvalidEventFormatError, PhoneNumberNotFoundError, MessageAlreadySentError, WhatsAppMessageFailedError, EventNotFoundError, MissingCredentialsError, EventAlreadyScheduledError, handle_exception
+from ErrorHandlers import  ContactFileNotFoundError, EventFileNotFoundError, PhoneNumberNotFoundError, EventNotFoundError, handle_exception
 
 # Define the error log file
 ERROR_LOG_FILE = "error_log.json"

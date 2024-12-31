@@ -1,0 +1,79 @@
+[
+    {
+        "kind": "calendar#event",
+        "etag": "\"3471310571884000\"",
+        "id": "69hj2c9hc4rj6bb1c9i3cb9k6sqjibb2cdij2b9k70qm6d1m6lgm4oplcg_20241231T173000Z",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=NjloajJjOWhjNHJqNmJiMWM5aTNjYjlrNnNxamliYjJjZGlqMmI5azcwcW02ZDFtNmxnbTRvcGxjZ18yMDI0MTIzMVQxNzMwMDBaIGJ1bmFzYWk0QG0",
+        "created": "2024-12-31T14:27:49.000Z",
+        "updated": "2024-12-31T14:28:05.942Z",
+        "summary": "New year's Eve",
+        "creator": {
+            "email": "bunasai4@gmail.com",
+            "self": true
+        },
+        "organizer": {
+            "email": "bunasai4@gmail.com",
+            "self": true
+        },
+        "start": {
+            "dateTime": "2024-12-31T23:00:00+05:30",
+            "timeZone": "Asia/Kolkata"
+        },
+        "end": {
+            "dateTime": "2024-12-31T23:59:00+05:30",
+            "timeZone": "Asia/Kolkata"
+        },
+        "recurringEventId": "69hj2c9hc4rj6bb1c9i3cb9k6sqjibb2cdij2b9k70qm6d1m6lgm4oplcg",
+        "originalStartTime": {
+            "dateTime": "2024-12-31T23:00:00+05:30",
+            "timeZone": "Asia/Kolkata"
+        },
+        "iCalUID": "69hj2c9hc4rj6bb1c9i3cb9k6sqjibb2cdij2b9k70qm6d1m6lgm4oplcg@google.com",
+        "sequence": 1,
+        "reminders": {
+            "useDefault": true
+        },
+        "eventType": "default"
+    },
+    {
+        "kind": "calendar#event",
+        "etag": "\"3471311040244000\"",
+        "id": "hjicu1kllrusjm040del1srna8_20250101",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=aGppY3Uxa2xscnVzam0wNDBkZWwxc3JuYThfMjAyNTAxMDEgYnVuYXNhaTRAbQ",
+        "created": "2024-12-31T14:32:00.000Z",
+        "updated": "2024-12-31T14:32:00.122Z",
+        "summary": "Sparsh Aggarwal's birthday",
+        "creator": {
+            "email": "bunasai4@gmail.com",
+            "self": true
+        },
+        "organizer": {
+            "email": "bunasai4@gmail.com",
+            "self": true
+        },
+        "start": {
+            "date": "2025-01-01"
+        },
+        "end": {
+            "date": "2025-01-02"
+        },
+        "recurringEventId": "hjicu1kllrusjm040del1srna8",
+        "originalStartTime": {
+            "date": "2025-01-01"
+        },
+        "transparency": "transparent",
+        "visibility": "private",
+        "iCalUID": "hjicu1kllrusjm040del1srna8@google.com",
+        "sequence": 0,
+        "reminders": {
+            "useDefault": false
+        },
+        "birthdayProperties": {
+            "contact": "people/c154523723680333172",
+            "type": "birthday"
+        },
+        "eventType": "birthday"
+    }
+]
