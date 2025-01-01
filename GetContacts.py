@@ -28,6 +28,7 @@ def get_google_contacts():
     contacts = {}
 
     for person in connections:
+        contact_id = person.get('resourceName')  # Contact ID is the resourceName
         names = person.get('names', [])
         phone_numbers = person.get('phoneNumbers', [])
         email_addresses = person.get('emailAddresses', [])
@@ -40,9 +41,10 @@ def get_google_contacts():
         email = email_addresses[0].get('value') if email_addresses else "No Email"
         birthday = birthdays[0].get('date') if birthdays else "No Birthday"
 
-        # Save to dictionary using phone number as the key
-        contacts[phone_number] = {
+        # Save to dictionary using contact ID as the key
+        contacts[contact_id] = {
             "Name": name,
+            "Phone": phone_number,
             "Email": email,
             "Birthday": birthday,
         }
@@ -54,11 +56,32 @@ def save_contacts_to_json(contacts, filename="contacts.json"):
         json.dump(contacts, file, indent=4)
     print(f"Contacts saved to {filename}")
 
+def get_contact_by_id(contact_id, contacts):
+    # Look up contact by ID
+    contact = contacts.get(contact_id)
+    if contact:
+        return contact
+    else:
+        print(f"Contact ID {contact_id} not found.")
+        return None
+
 if __name__ == "__main__":
     try:
+        # Get all contacts
         contacts = get_google_contacts()
         if contacts:
+            # Save contacts to a file
             save_contacts_to_json(contacts)
+
+            # Request contact ID from the user
+            contact_id = input("Enter the contact ID: ")
+
+            # Get the contact information by ID
+            contact = get_contact_by_id(contact_id, contacts)
+            if contact:
+                print(f"Contact Details:\nName: {contact['Name']}\nPhone: {contact['Phone']}\nEmail: {contact['Email']}\nBirthday: {contact['Birthday']}")
+            else:
+                print("No contact found for the provided ID.")
         else:
             print("No contacts found.")
     except Exception as e:

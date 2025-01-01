@@ -1,0 +1,28 @@
+2024-12-31 21:10:08,524 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:10:08.524634
+2024-12-31 21:10:08,525 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:10:08,526 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:10:08.526225
+2024-12-31 21:10:08,526 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:19:40,204 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:19:40.204139
+2024-12-31 21:19:40,204 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:19:40,205 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:19:40.205060
+2024-12-31 21:19:40,205 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:00,720 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:00.720102
+2024-12-31 21:23:00,720 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:00,720 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:00.720360
+2024-12-31 21:23:00,720 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:09,700 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:09.700844
+2024-12-31 21:23:09,701 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:09,701 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:09.701276
+2024-12-31 21:23:09,701 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:26,965 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:26.964889
+2024-12-31 21:23:26,966 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:23:37,149 - ERROR - PhoneNumberNotFoundError - Phone number not found for the contact. - 2024-12-31T21:23:37.148978
+2024-12-31 21:23:37,149 - ERROR - No handler found for <class 'ErrorHandlers.PhoneNumberNotFoundError'>. Adding default handler.
+2024-12-31 21:36:01,185 - ERROR - CountryCodeException - Country Code Missing in Phone Number! - 2024-12-31T21:36:01.185187
+2024-12-31 21:36:01,186 - ERROR - No handler found for <class 'pywhatkit.core.exceptions.CountryCodeException'>. Adding default handler.
+2024-12-31 21:36:01,186 - ERROR - CountryCodeException - Country Code Missing in Phone Number! - 2024-12-31T21:36:01.186430
+2024-12-31 21:36:01,186 - ERROR - No handler found for <class 'pywhatkit.core.exceptions.CountryCodeException'>. Adding default handler.
+2024-12-31 21:36:01,186 - ERROR - CountryCodeException - Country Code Missing in Phone Number! - 2024-12-31T21:36:01.186677
+2024-12-31 21:36:01,186 - ERROR - No handler found for <class 'pywhatkit.core.exceptions.CountryCodeException'>. Adding default handler.
+2024-12-31 21:36:01,186 - ERROR - CountryCodeException - Country Code Missing in Phone Number! - 2024-12-31T21:36:01.186840
+2024-12-31 21:36:01,186 - ERROR - No handler found for <class 'pywhatkit.core.exceptions.CountryCodeException'>. Adding default handler.

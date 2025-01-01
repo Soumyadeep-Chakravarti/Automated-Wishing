@@ -1,6 +1,11 @@
 import datetime
 import json
 import os
+import logging
+
+# Configure logging to a file
+logging.basicConfig(filename="error_log.txt", level=logging.ERROR, 
+                    format="%(asctime)s - %(levelname)s - %(message)s")
 
 # File to store custom error handlers
 ERROR_HANDLERS_FILE = "error_handlers.json"
@@ -59,11 +64,6 @@ class EventAlreadyScheduledError(CustomError):
         self.message = message
         super().__init__(self.message)
 
-class PhoneNumberNotFoundError(CustomError):
-    def __init__(self, message="Phone number not found for the contact."):
-        self.message = message
-        super().__init__(self.message)
-
 # Function to load error handlers from a file
 def load_error_handlers():
     if not os.path.exists(ERROR_HANDLERS_FILE):
@@ -81,13 +81,16 @@ def save_error_handlers(error_handlers):
 
 # Default error handlers for specific error types
 def handle_file_not_found_error(error_details):
-    print(f"Handling FileNotFoundError: {error_details['message']}")
+    logging.error(f"Handling FileNotFoundError: {error_details['message']}")
+    print(f"File not found: {error_details['message']}")
 
 def handle_network_error(error_details):
-    print(f"Handling NetworkError: {error_details['message']}")
+    logging.error(f"Handling NetworkError: {error_details['message']}")
+    print(f"Network error: {error_details['message']}")
 
 def handle_database_error(error_details):
-    print(f"Handling DatabaseError: {error_details['message']}")
+    logging.error(f"Handling DatabaseError: {error_details['message']}")
+    print(f"Database error: {error_details['message']}")
 
 # Function to add a new custom error handler to the system
 def add_error_handler(error_type, handler_method):
@@ -117,10 +120,12 @@ def call_error_handler(error_type, error_details):
         else:
             print(f"Handler method for {error_type} not found.")
     else:
-        print(f"No handler found for {error_type}. Adding default handler.")
+        logging.error(f"No handler found for {error_type}. Adding default handler.")
         print(f"Handling {error_type} with default handler.")
         print(f"Error details: {error_details}")
         
+
+# Function to handle exceptions and log them
 def handle_exception(e):
     # Log the error details
     timestamp = datetime.datetime.now().isoformat()
@@ -130,16 +135,10 @@ def handle_exception(e):
         "type": type(e).__name__
     }
 
-    # Load the error handlers
-    error_handlers = load_error_handlers()
-
-    # Call the error handler based on the error type
-    handler_method = error_handlers.get(type(e), None)
+    logging.error(f"{error_details['type']} - {error_details['message']} - {error_details['timestamp']}")
     
-    if handler_method:
-        handler_method(error_details)
-    else:
-        print(f"Default handler: {error_details['message']}")
+    # Call the error handler
+    call_error_handler(type(e), error_details)
 
 
 # Example usage to add new handlers and handle custom errors
@@ -156,4 +155,4 @@ if __name__ == "__main__":
     try:
         raise TokenFileNotFoundError("Sample token file not found")
     except TokenFileNotFoundError as e:
-        call_error_handler(TokenFileNotFoundError, error_details)
+        handle_exception(e)

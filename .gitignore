@@ -1,1 +1,6 @@
-.vscode
+.vscode/
+__pycache__/
+
+
+
+PyWhatKit_DB.txt
